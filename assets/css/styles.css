@@ -1,0 +1,126 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0), rgb(128, 86, 255),rgb(0, 0, 0), rgb(0, 0, 0));
+    background-size: 100% 300%;
+    animation: fxd 10s infinite;
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+@keyframes fxd{
+    0% {
+        background-position: top;
+    }
+    50% {
+        background-position: center;
+    }
+    100% {
+        background-position: bottom;
+    }
+}
+/*------------CONTENEDOR--------------*/
+.contenedor{
+    width: 400px;
+    height: 400px;
+    background-color: rgb(27, 27, 27);
+    margin: 10rem 35rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgb(133, 62, 247);
+}
+
+h2{
+    text-align: center;
+    color: rgb(137, 97, 255);
+    padding: 20px;
+}
+
+input{
+    padding: 10px;
+    width: 60%;
+    margin: 5px auto;
+    background-color: rgb(93, 93, 93);
+    border-radius: 7px;
+}
+
+input:last-child{
+    background-color: rgb(137, 97, 255);
+    font-size: 17px;
+    cursor: pointer;
+}
+
+input::placeholder{
+    color: rgb(187, 187, 187);
+}
+
+.p{
+    display: flex;
+    color: rgb(157, 157, 157);
+    margin-left: 70px;
+    gap: 0 60px;
+}
+
+p:last-child{
+    color: rgb(152, 117, 255);
+}
+/* ----------FONDO---------- */
+.fondo{
+    width: 110px;
+    height: 110px;
+    background-color: rgb(16, 16, 16);
+    transition: 1s background-color;
+}
+
+.fondo:hover{
+    background-color: rgb(137, 97, 255);
+    transition: transition;
+}
+
+.background{
+    display: grid;
+    grid-template-columns: repeat(15, 110px);
+    grid-template-rows: auto;
+    gap: 2px;
+}
+
+/* --------TELEFONOS---------- */
+@media (max-width:600px) {
+    body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    }
+    .contenedor{
+        width: 300px;
+        height: 400px;
+        margin: 15rem 3.4rem;
+    }
+    .fondo{
+        width: 135px;
+        height: 135px;
+    }
+    
+    .background{
+        display: grid;
+        grid-template-columns: repeat(3, 135px);
+        grid-template-rows: auto;
+        gap: 2px;
+    }
+    .p{
+        margin-left: 60px;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 901px) {
+    .contenedor{
+        margin: 10rem 30rem;
+    }
+}
